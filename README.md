@@ -1,7 +1,7 @@
 # Ether-Vault
 Keep your ether safe for n blocks
 
-#Getting Started
+##Getting Started
 1) Open up geth
 
 2) 
@@ -39,3 +39,6 @@ var vault = vaultContract.new({from: web3.eth.accounts[0], data: vaultCompiled.t
 > vault.sendAssets( 10, {from: eth.accounts[0], to: vault.address, vaule: 20})
 ```
 This would store 20 wei and would be avaliable after block number 10 has been mined. 
+
+##Disclaimer
+Please use at your own will. I do not guarantee any of the funds sent and there could potentially be bugs in the code. 
