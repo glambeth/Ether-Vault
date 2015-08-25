@@ -14,3 +14,8 @@ var vaultSource = 'contract timeVault { struct Member { address addr; uint amoun
 ```
 var vaultCompiled = web3.eth.compile.solidity(vaultSource)
 ```
+
+5) 
+```
+var vaultContract = web3.eth.contract(vaultCompiled.timeVault.info.abiDefinition)
+```
