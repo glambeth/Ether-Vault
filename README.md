@@ -36,7 +36,7 @@ var vault = vaultContract.new({from: web3.eth.accounts[0], data: vaultCompiled.t
 
 7) Now the contract should be mined. Time for the fun stuff! Let's send some assets to the vault.
 ```
-vault.sendAssets( 10, {from: eth.accounts[0], to: vault.address, vaule: 20})
+vault.sendAssets.sendTransaction( 10, {from: eth.accounts[0], to: vault.address, vaule: 20})
 ```
 This would store 20 wei and would be avaliable after block number 10 has been mined. 
 
