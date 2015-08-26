@@ -23,12 +23,15 @@ contract timeVault {
 		newMember.blockWithdrawlNumber = blockWithDrawlNumber;
 		members[numDeposits] = newMember;
 		numDeposits++;
+		fundsStored = fundsStored + msg.value;
 	}
 
 	function retrieveAssets() { 
 		for (uint i =0; i < numDeposits; ++i) {
 			if (members[i].blockWithdrawlNumber >= block.number) {
 				members[i].addr.send(members[i].amount);
+				numDeposits--;
+				fundsStored = fundsStored - msg.value;
 			}
 		}
 	}
